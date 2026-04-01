@@ -10,6 +10,6 @@ function draw() {
 
   fill('white');
   ellipse(200, 200, 40, 40);
-  ellipse(210, 210, 40, 40);
-  ellipse(215, 215, 40, 40);
+  ellipse(220, 220, 40, 40);
+  ellipse(190, 220, 40, 40);
 }
