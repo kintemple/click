@@ -8,5 +8,5 @@ function draw() {
   ellipse(100, 100, 200, 200); 
 
   fill('white');
-  ellipse(200,200,20,20);
+  ellipse(200, 200, 20, 20);
 }
