@@ -11,13 +11,13 @@ let showImage = false;
 
 function preload(){
   bimg = loadImage('/assets/IMG_4466.JPG');
-  img1 = loadImage('Scan 6.png');
-  img2 = loadImage('Scan 6.1.png');
-  img3 = loadImage('Scan 6.2.png');
-  img4 = loadImage('Scan 6.3.png');
-  img5 = loadImage('Scan 6.4.png');
-  img6 = loadImage('Scan 6.5.png');
-  img7 = loadImage('Scan 6.6.png');
+  img1 = loadImage('/assets/Scan 6.png');
+  img2 = loadImage('/assets/Scan 6.1.png');
+  img3 = loadImage('/assets/Scan 6.2.png');
+  img4 = loadImage('/assets/Scan 6.3.png');
+  img5 = loadImage('/assets/Scan 6.4.png');
+  img6 = loadImage('/assets/Scan 6.5.png');
+  img7 = loadImage('/assets/Scan 6.6.png');
 }
 
 function setup() {
