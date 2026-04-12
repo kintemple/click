@@ -48,13 +48,13 @@ if (canvasRatio > imgRatio) {
   //text(`x: ${mouseX} y: ${mouseY}`, 50, 50);
   
   if (showImage) {
-    image(img1, 50, 50);
-    image(img2, 250, 400);
-    image(img3, 330, 150);
-    image(img4, 40, 300);
-    image(img5, 200, 40);
-    image(img6, 200, 300);
-    image(img7, 400, 270);
+    image(img1, 350, 150);
+    image(img2, 550, 500);
+    image(img3, 630, 250);
+    image(img4, 340, 400);
+    image(img5, 500, 140);
+    image(img6, 500, 400);
+    image(img7, 700, 370);
   }
 }
 
