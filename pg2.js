@@ -58,8 +58,8 @@ if (canvasRatio > imgRatio) {
 function mousePressed() {
   showImage = true;
 
-  let d = dist(mouseX, mouseY, 400, 150);
-  if(d<30){
+  let d = dist(mouseX, mouseY, 490, 180);
+  if(d<40){
     window.open('pg3.html', '_self');
   }
 }

@@ -8,13 +8,13 @@ let img6;
 let showImage = false;
 
 function preload(){
-  bimg = loadImage('IMG_4487.JPG');
-  img1 = loadImage('Scan 6.1.png');
-  img2 = loadImage('Scan 6.2.png');
-  img3 = loadImage('Scan 6.3.png');
-  img4 = loadImage('Scan 6.4.png');
-  img5 = loadImage('Scan 6.5.png');
-  img6 = loadImage('Scan 6.6.png');
+  bimg = loadImage('/assets_pg3/IMG_4487.JPG');
+  img1 = loadImage('/assets_pg3/Scan 6.1.png');
+  img2 = loadImage('/assets_pg3/Scan 6.2.png');
+  img3 = loadImage('/assets_pg3/Scan 6.3.png');
+  img4 = loadImage('/assets_pg3/Scan 6.4.png');
+  img5 = loadImage('/assets_pg3/Scan 6.5.png');
+  img6 = loadImage('/assets_pg3/Scan 6.6.png');
 }
 
 function setup() {
@@ -22,6 +22,7 @@ function setup() {
 }
 
 function draw() { 
+  
   let imgRatio = bimg.width / bimg.height;
   let canvasRatio = width / height;
   let drawW, drawH, drawX, drawY;
@@ -39,16 +40,21 @@ if (canvasRatio > imgRatio) {
  
   image(bimg, drawX, drawY, drawW, drawH);
   
+  
   if (showImage) {
-    image(img1, 50, 50);
-    image(img2, 250, 410);
-    image(img3, 330, 150);
-    image(img4, 40, 300);
-    image(img5, 170, 250);
-    image(img6, 200, 40);
+    image(img1, 250, 100);
+    image(img2, 550, 450);
+    image(img3, 580, 200);
+    image(img4, 260, 350);
+    image(img5, 410, 300);
+    image(img6, 450, 100);
   }
 }
 
 function mousePressed() {
   showImage = true;
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
