@@ -44,21 +44,21 @@ if (canvasRatio > imgRatio) {
   image(bimg, drawX, drawY, drawW, drawH);
   
   if (showImage) {
-    image(img1, 350, 150);
-    image(img2, 550, 510);
-    image(img3, 630, 250);
-    image(img4, 340, 400);
-    image(img5, 500, 140);
-    image(img6, 470, 400);
-    image(img7, 400, 300);
-    image(img8, 370, 115);
+    image(img1, 550, 150);
+    image(img2, 750, 510);
+    image(img3, 830, 250);
+    image(img4, 540, 400);
+    image(img5, 700, 140);
+    image(img6, 670, 400);
+    image(img7, 600, 300);
+    image(img8, 570, 115);
   }
 }
 
 function mousePressed() {
   showImage = true;
 
-  let d = dist(mouseX, mouseY, 490, 180);
+  let d = dist(mouseX, mouseY, 690, 180);
   if(d<40){
     window.open('pg3.html', '_self');
   }

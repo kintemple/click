@@ -48,20 +48,20 @@ if (canvasRatio > imgRatio) {
   //text(`x: ${mouseX} y: ${mouseY}`, 50, 50);
   
   if (showImage) {
-    image(img1, 350, 100);
-    image(img2, 550, 450);
-    image(img3, 630, 200);
-    image(img4, 340, 310);
-    image(img5, 500, 100);
-    image(img6, 500, 350);
-    image(img7, 700, 320);
+    image(img1, 550, 100);
+    image(img2, 750, 450);
+    image(img3, 830, 200);
+    image(img4, 540, 310);
+    image(img5, 700, 100);
+    image(img6, 700, 350);
+    image(img7, 900, 320);
   }
 }
 
 function mousePressed() {
   showImage = true;
 
-  let d = dist(mouseX, mouseY, 450, 200);
+  let d = dist(mouseX, mouseY, 650, 200);
   if(d<40){
     window.open('pg2.html', '_self');
   }

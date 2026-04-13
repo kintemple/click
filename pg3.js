@@ -42,12 +42,12 @@ if (canvasRatio > imgRatio) {
   
   
   if (showImage) {
-    image(img1, 250, 100);
-    image(img2, 550, 450);
-    image(img3, 580, 200);
-    image(img4, 260, 350);
-    image(img5, 410, 300);
-    image(img6, 450, 100);
+    image(img1, 450, 100);
+    image(img2, 750, 450);
+    image(img3, 780, 200);
+    image(img4, 460, 350);
+    image(img5, 610, 300);
+    image(img6, 650, 100);
   }
 }
 
