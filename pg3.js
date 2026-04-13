@@ -8,7 +8,7 @@ let img6;
 let showImage = false;
 
 function preload() {
-  bimg = loadImage("assets_pg3/IMG_4487.jpg");
+  bimg = loadImage("assets_pg3/img_4487.jpg");
   img1 = loadImage("assets_pg3/Scan1.png");
   img2 = loadImage("assets_pg3/Scan2.png");
   img3 = loadImage("assets_pg3/Scan3.png");
