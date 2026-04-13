@@ -10,14 +10,14 @@ let showImage = false;
 
 
 function preload(){
-  bimg = loadImage('/assets/IMG_4466.JPG');
-  img1 = loadImage('/assets/Scan 6.png');
-  img2 = loadImage('/assets/Scan 6.1.png');
-  img3 = loadImage('/assets/Scan 6.2.png');
-  img4 = loadImage('/assets/Scan 6.3.png');
-  img5 = loadImage('/assets/Scan 6.4.png');
-  img6 = loadImage('/assets/Scan 6.5.png');
-  img7 = loadImage('/assets/Scan 6.6.png');
+  bimg = loadImage('/assets_pg1/IMG_4466.JPG');
+  img1 = loadImage('/assets_pg1/Scan 6.png');
+  img2 = loadImage('/assets_pg1/Scan 6.1.png');
+  img3 = loadImage('/assets_pg1/Scan 6.2.png');
+  img4 = loadImage('/assets_pg1/Scan 6.3.png');
+  img5 = loadImage('/assets_pg1/Scan 6.4.png');
+  img6 = loadImage('/assets_pg1/Scan 6.5.png');
+  img7 = loadImage('/assets_pg1/Scan 6.6.png');
 }
 
 function setup() {
@@ -48,18 +48,23 @@ if (canvasRatio > imgRatio) {
   //text(`x: ${mouseX} y: ${mouseY}`, 50, 50);
   
   if (showImage) {
-    image(img1, 350, 150);
-    image(img2, 550, 500);
-    image(img3, 630, 250);
-    image(img4, 340, 400);
-    image(img5, 500, 140);
-    image(img6, 500, 400);
-    image(img7, 700, 370);
+    image(img1, 350, 100);
+    image(img2, 550, 450);
+    image(img3, 630, 200);
+    image(img4, 340, 310);
+    image(img5, 500, 100);
+    image(img6, 500, 350);
+    image(img7, 700, 320);
   }
 }
 
 function mousePressed() {
   showImage = true;
+
+  let d = dist(mouseX, mouseY, 450, 200);
+  if(d<40){
+    window.open('pg2.html', '_self');
+  }
 }
 
 
