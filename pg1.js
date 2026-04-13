@@ -10,14 +10,14 @@ let showImage = false;
 
 
 function preload(){
-  bimg = loadImage('/assets_pg1/IMG_4466.jpg');
-  img1 = loadImage('/assets_pg1/Scan 6.png');
-  img2 = loadImage('/assets_pg1/Scan 6.1.png');
-  img3 = loadImage('/assets_pg1/Scan 6.2.png');
-  img4 = loadImage('/assets_pg1/Scan 6.3.png');
-  img5 = loadImage('/assets_pg1/Scan 6.4.png');
-  img6 = loadImage('/assets_pg1/Scan 6.5.png');
-  img7 = loadImage('/assets_pg1/Scan 6.6.png');
+  bimg = loadImage('assets_pg1/IMG_4466.jpg');
+  img1 = loadImage('assets_pg1/Scan1.png');
+  img2 = loadImage('assets_pg1/Scan2.png');
+  img3 = loadImage('assets_pg1/Scan3.png');
+  img4 = loadImage('assets_pg1/Scan4.png');
+  img5 = loadImage('assets_pg1/Scan5.png');
+  img6 = loadImage('assets_pg1/Scan6.png');
+  img7 = loadImage('assets_pg1/Scan7.png');
 }
 
 function setup() {
