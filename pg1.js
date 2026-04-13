@@ -10,7 +10,7 @@ let showImage = false;
 
 
 function preload(){
-  bimg = loadImage('/assets_pg1/IMG_4466.JPG');
+  bimg = loadImage('/assets_pg1/IMG_4466.jpg');
   img1 = loadImage('/assets_pg1/Scan 6.png');
   img2 = loadImage('/assets_pg1/Scan 6.1.png');
   img3 = loadImage('/assets_pg1/Scan 6.2.png');
