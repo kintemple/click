@@ -1,3 +1,4 @@
+let ratio;
 let bimg;
 let img1;
 let img2;
@@ -21,40 +22,29 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  const design_w = 1440;
+  const design_h = 1024;
+  ratio = min(windowWidth / design_w, windowHeight / design_h);
+  createCanvas(design_w * ratio, design_h * ratio);
 }
 
-function draw(){
-  let imgRatio = bimg.width / bimg.height;
-  let canvasRatio = width / height;
-  let drawW, drawH, drawX, drawY;
+function draw(){  
 
-if (canvasRatio > imgRatio) {  
-    drawW = width;
-    drawH = width / imgRatio;
-  } else {
-    drawH = height;
-    drawW = height * imgRatio;
-}
 
-  drawX = (width - drawW) / 2;
-  drawY = (height - drawH) / 2;
- 
-  image(bimg, drawX, drawY, drawW, drawH);
+  image(bimg, 0 * ratio, 0 * ratio, bimg.width * ratio, bimg.height * ratio);
 
-  
   //textAlign(CENTER);
   //textSize(16);
   //text(`x: ${mouseX} y: ${mouseY}`, 50, 50);
   
   if (showImage) {
-    image(img1, 550, 100);
-    image(img2, 750, 450);
-    image(img3, 830, 200);
-    image(img4, 540, 310);
-    image(img5, 700, 100);
-    image(img6, 700, 350);
-    image(img7, 900, 320);
+    image(img1, 550 * ratio, 100 * ratio, img1.width * ratio, img1.height * ratio);
+    image(img2.width * ratio, img2.height * ratio, 750 * ratio, 450 * ratio);
+    image(img3, 830 * ratio, 200 * ratio);
+    image(img4, 540 * ratio, 310 * ratio);
+    image(img5, 700 * ratio, 100 * ratio);
+    image(img6, 700 * ratio, 350 * ratio);
+    image(img7, 900 * ratio, 320 * ratio);
   }
 }
 
@@ -69,5 +59,8 @@ function mousePressed() {
 
 
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+  const design_w = 1440;
+  const design_h = 1024;
+  ratio = min(windowWidth / design_w, windowHeight / design_h);
+  resizeCanvas(design_w * ratio, design_h * ratio);
 }
