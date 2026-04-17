@@ -38,13 +38,13 @@ function draw(){
   //text(`x: ${mouseX} y: ${mouseY}`, 50, 50);
   
   if (showImage) {
-    image(img1, 550 * ratio, 100 * ratio, img1.width * ratio, img1.height * ratio);
-    image(img2.width * ratio, img2.height * ratio, 750 * ratio, 450 * ratio);
-    image(img3, 830 * ratio, 200 * ratio);
-    image(img4, 540 * ratio, 310 * ratio);
-    image(img5, 700 * ratio, 100 * ratio);
-    image(img6, 700 * ratio, 350 * ratio);
-    image(img7, 900 * ratio, 320 * ratio);
+    image(img1, 200 * ratio, 100 * ratio, img1.width * ratio, img1.height * ratio);
+    image(img2, 500 * ratio, 450 * ratio, img2.width * ratio, img2.height * ratio);
+    image(img3, 600 * ratio, 5 * ratio, 400 * ratio, 500 * ratio);
+    image(img4, 200 * ratio, 400 * ratio, img4.width * ratio, img4.height * ratio);
+    image(img5, 900 * ratio, 50 * ratio, img5.width * ratio, img5.height * ratio);
+    image(img6, 600 * ratio, 350 * ratio, img6.width * ratio, img6.height * ratio);
+    image(img7, 900 * ratio, 470 * ratio, img7.width * ratio, img7.height * ratio);
   }
 }
 
