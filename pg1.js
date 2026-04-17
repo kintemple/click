@@ -51,8 +51,8 @@ function draw(){
 function mousePressed() {
   showImage = true;
 
-  let d = dist(mouseX, mouseY, 650, 200);
-  if(d<40){
+  let d = dist(mouseX, mouseY, 450, 270);
+  if(d<250){
     window.open('pg2.html', '_self');
   }
 }
