@@ -9,6 +9,7 @@ let img6;
 let img7;
 let showImage = false;
 
+
 function preload() {
   bimg = loadImage("assets_pg1/img_4466.jpg");
   img1 = loadImage("assets_pg1/Scan1.png");
@@ -21,32 +22,46 @@ function preload() {
 }
 
 function setup() {
-  const design_w = windowWidth;
-  const design_h = windowHeight;
-  ratio = min(windowWidth / design_w, windowHeight / design_h);
-  createCanvas(design_w * ratio, design_h * ratio);
+  createCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
-  image(bimg, 0 * ratio, 0 * ratio, bimg.width * ratio, bimg.height * ratio);
+  const design_w = 1440;
+  const design_h = 1024;
+  ratio = min(windowWidth / design_w, 
+  windowHeight / design_h);
 
-  //textAlign(CENTER);
-  //textSize(16);
-  //text(`x: ${mouseX} y: ${mouseY}`, 50, 50);
+  let imgRatio = bimg.width / bimg.height;
+  let canvasRatio = width / height;
+  let drawW, drawH, drawX, drawY;
+
+  if (canvasRatio > imgRatio) {  
+    drawW = width;
+    drawH = width / imgRatio;
+  } else {
+    drawH = height;
+    drawW = height * imgRatio;
+}
+
+  drawX = (width - drawW) / 2;
+  drawY = (height - drawH) / 2;
+
+  image(bimg, drawX, drawY, drawW, drawH);
+
+  textAlign(CENTER);
+  textSize(16);
+  text(`x: ${mouseX} y: ${mouseY}`, 50, 50);
 
   if (showImage) {
-    image(
-      img1,
-      200 * ratio,
-      100 * ratio,
-      img1.width * ratio,
-      img1.height * ratio,
-    );
-    image(img2, 500, 450);
+    //vanicream
+    image(img1, width/6, height/10);
+    //dryshampoo
+    image(img2, width * 2/3, height/2.5);
+    //
     image(img3, 600, 400);
     image(img4, 200, 400);
     image(img5, 900, 50);
-    image(img6,600, 350);
+    image(img6, 600, 350);
     image(img7, 900, 470);
   }
 }
@@ -54,15 +69,12 @@ function draw() {
 function mousePressed() {
   showImage = true;
 
-  let d = dist(mouseX, mouseY, 200, 100);
-  if (d<40) {
+  let d = dist(mouseX, mouseY, width/2, height/2);
+  if (d<=100) {
     window.open("pg2.html", "_self");
   }
 }
 
 function windowResized() {
-  const design_w = 1440;
-  const design_h = 1024;
-  ratio = min(windowWidth / design_w, windowHeight / design_h);
-  resizeCanvas(design_w * ratio, design_h * ratio);
+  resizeCanvas(windowWidth, windowHeight);
 }
