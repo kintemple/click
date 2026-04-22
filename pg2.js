@@ -48,32 +48,35 @@ if (canvasRatio > imgRatio) {
  
   image(bimg, drawX, drawY, drawW, drawH);
 
-  textAlign(CENTER);
-  textSize(16);
-  text(`x: ${mouseX} y: ${mouseY}`, 50, 50);
+  //textAlign(CENTER);
+  //textSize(16);
+  //text(`x: ${mouseX} y: ${mouseY}`, 50, 50);
   
   if (showImage) {
-    // image(img1, 550 * ratio, 150 * ratio);
     //floss
-    image(img1, width/3, height/8);
-    // image(img2, 750 * ratio, 510 * ratio);
-    image(img2, width/2.5, height/5);
-    // image(img3, 830 * ratio, 250 * ratio);
-    //retainer container
-    image(img3, width/1.5, height/6);
-    image(img4, 540 * ratio, 400 * ratio);
-    image(img5, 700 * ratio, 140 * ratio);
-    image(img6, 670 * ratio, 400 * ratio);
-    image(img7, 600 * ratio, 300 * ratio);
-    image(img8, 570 * ratio, 115 * ratio);
+    image(img1, width/12, height/10);
+    //toothpste
+    image(img2, width/2, height/2.5);
+    //retainer
+    image(img3, width/3, height/10);
+    //mouthwash
+    image(img4, width/20, height/3);
+    //serum
+    image(img5, width/1.5, height/20);
+    //solution
+    image(img6, width/1.5, height/1.9, 300, 500);
+    //case
+    image(img7, width/2.5, height/1.5);
+    //scissors
+    image(img8, width/3, height/2)
   }
 }
 
 function mousePressed() {
   showImage = true;
 
-  let d = dist(mouseX, mouseY, width/2, height/2);
-  if(d <= 100){
+  let d = dist(mouseX, mouseY, width/4.5, height/3.5);
+  if(d <= 80){
     window.open('pg3.html', '_self');
   }
 }

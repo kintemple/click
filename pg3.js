@@ -40,12 +40,18 @@ function draw() {
   image(bimg, drawX, drawY, drawW, drawH);
 
   if (showImage) {
-    image(img1, 450, 100);
-    image(img2, 750, 450);
-    image(img3, 780, 200);
-    image(img4, 460, 350);
-    image(img5, 610, 300);
-    image(img6, 650, 100);
+    //pj
+    image(img1, width/12, height/10);
+    //longsleeve
+    image(img2, width/2, height/2.5);
+    //tshirt
+    image(img3, width/3, height/10);
+    //socks
+    image(img4, width/4, height/2.5);
+    //shorts
+    image(img5, width/1.5, height/20);
+    //tank
+    image(img6, width/1.4, height/1.9);
   }
 }
 

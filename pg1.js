@@ -48,29 +48,33 @@ function draw() {
 
   image(bimg, drawX, drawY, drawW, drawH);
 
-  textAlign(CENTER);
-  textSize(16);
-  text(`x: ${mouseX} y: ${mouseY}`, 50, 50);
+  //textAlign(CENTER);
+  //textSize(16);
+  //text(`x: ${mouseX} y: ${mouseY}`, 50, 50);
 
   if (showImage) {
     //vanicream
-    image(img1, width/6, height/10);
+    image(img1, width/12, height/10);
     //dryshampoo
-    image(img2, width * 2/3, height/2.5);
-    //
-    image(img3, 600, 400);
-    image(img4, 200, 400);
-    image(img5, 900, 50);
-    image(img6, 600, 350);
-    image(img7, 900, 470);
+    image(img2, width/2, height/2.5);
+    //bottle
+    image(img3, width/3, height/10);
+    //deodorant
+    image(img4, width/20, height/2);
+    //odele
+    image(img5, width/1.5, height/14);
+    //brush
+    image(img6, width/3, height/1.5);
+    //pouch
+    image(img7, width/1.4, height/1.9);
   }
 }
 
 function mousePressed() {
   showImage = true;
 
-  let d = dist(mouseX, mouseY, width/2, height/2);
-  if (d<=100) {
+  let d = dist(mouseX, mouseY, width/4.5, height/3);
+  if (d<=80) {
     window.open("pg2.html", "_self");
   }
 }
