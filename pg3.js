@@ -57,6 +57,12 @@ function draw() {
 
 function mousePressed() {
   showImage = true;
+
+
+let d = dist(mouseX, mouseY, width/4.5, height/2.5);
+  if(d <= 80){
+    window.open('pg4.html', '_self');
+  }
 }
 
 function windowResized() {
