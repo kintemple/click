@@ -75,7 +75,17 @@ function mousePressed() {
 
   let d = dist(mouseX, mouseY, width/4.5, height/3);
   if (d<=80) {
-    window.open("pg2.html", "_self");
+    window.open("pg10.html", "_self");
+  }
+
+  let d2 = dist(mouseX, mouseY, width/2, height/2);
+  if (d2<=80) {
+    window.open("pg2.html", "_self")
+  }
+
+  let d3 = dist(mouseX, mouseY, width/4.5, height/4);
+  if (d3<=80) {
+    window.open("pg5.html", "_self")
   }
 }
 
