@@ -5,6 +5,7 @@ let img3;
 let img4;
 let img5;
 let showImage = false;
+let sound;
 
 function preload() {
   bimg = loadImage("assets_pg5/img_4499.jpg");
@@ -13,6 +14,7 @@ function preload() {
   img3 = loadImage("assets_pg5/Scan3.png");
   img4 = loadImage("assets_pg5/Scan4.png");
   img5 = loadImage("assets_pg5/Scan5.png");
+  sound = loadSound("assets_pg5/click.m4a");
 }
 
 function setup() {
@@ -52,8 +54,30 @@ function mousePressed() {
 
   let d = dist(mouseX, mouseY, width/4.5, height/2.5);
   if(d <= 80){
+    window.open('pg9.html', '_self');
+  }
+
+  let d2 = dist(mouseX, mouseY, width/2.3, height/2.5);
+  if(d2 <= 80){
     window.open('pg6.html', '_self');
   }
+
+  let d3 = dist(mouseX, mouseY, width/3, height/1.5);
+  if(d3 <= 90){
+    window.open("pg10.html", "_self");
+  }
+
+  let d4 = dist(mouseX, mouseY, width/1.7, height/1.5);
+  if(d4 <= 80){
+    window.open("pg7.html", "_self");
+  }
+
+  let d5 = dist(mouseX, mouseY, width/1.2, height/3);
+  if(d5 <= 80){
+    window.open("pg2.html", "_self");
+  }
+
+  sound.play();
 }
 
 function windowResized() {

@@ -3,12 +3,14 @@ let img1;
 let img2;
 let img3;
 let showImage = false;
+let sound;
 
 function preload() {
   bimg = loadImage("assets_pg9/img_4527.jpg");
   img1 = loadImage("assets_pg9/Scan1.png");
   img2 = loadImage("assets_pg9/Scan2.png");
   img3 = loadImage("assets_pg9/Scan3.png");
+  sound = loadSound("assets_pg7/click.m4a");
 }
 
 function setup() {
@@ -45,8 +47,20 @@ function mousePressed() {
 
   let d = dist(mouseX, mouseY, width/4.5, height/4);
   if(d <= 80){
-    window.open('pg10.html', '_self');
+    window.open("pg2.html", "_self");
   }
+
+  let d2 = dist(mouseX, mouseY, width/2, height/2);
+  if(d2 <= 80){
+    window.open("index.html", "_self");
+  }
+
+  let d3 = dist(mouseX, mouseY, width/1.7, height/1.7);
+  if(d3 <= 80){
+    window.open("pg3.html", "_self");
+  }
+
+  sound.play();
 }
 
 function windowResized() {

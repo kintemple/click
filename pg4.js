@@ -3,12 +3,14 @@ let img1;
 let img2;
 let img3;
 let showImage = false;
+let sound;
 
 function preload() {
   bimg = loadImage("assets_pg4/img_4494.jpg");
   img1 = loadImage("assets_pg4/Scan1.png");
   img2 = loadImage("assets_pg4/Scan2.png");
   img3 = loadImage("assets_pg4/Scan3.png");
+  sound = loadSound("assets_pg4/click.m4a");
 }
 
 function setup() {
@@ -47,6 +49,18 @@ function mousePressed() {
   if(d <= 80){
     window.open('pg5.html', '_self');
   }
+  
+  let d2 = dist(mouseX, mouseY, width/2, height/2);
+  if(d2 <= 80){
+    window.open('pg11.html', '_self');
+  }
+
+  let d3 = dist(mouseX, mouseY, width/1.7, height/1.5);
+  if(d3 <= 80){
+    window.open('pg3.html', '_self');
+  }
+
+  sound.play();
 }
 
 function windowResized() {

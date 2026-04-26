@@ -1,10 +1,12 @@
 let bimg;
 let img1;
 let showImage = false;
+let sound;
 
 function preload() {
   bimg = loadImage("assets_pg10/img_4531.jpg");
   img1 = loadImage("assets_pg10/Scan1.png");
+  sound = loadSound("assets_pg7/click.m4a");
 }
 
 function setup() {
@@ -41,6 +43,7 @@ function mousePressed() {
   if(d <= 100){
     window.open('pg11.html', '_self');
   }
+  sound.play();
 }
 
 function windowResized() {
